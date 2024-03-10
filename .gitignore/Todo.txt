@@ -1,0 +1,7 @@
+Ignore this file pls
+
+1. Define directory structure
+2. Set up routing between internal HTMLs
+a. define routing function
+b. define hash for links and organize them
+c. 

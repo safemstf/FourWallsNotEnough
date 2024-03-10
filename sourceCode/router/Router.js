@@ -67,3 +67,4 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("popstate", () => {
     mainRouter(window.location.pathname);
 });
+

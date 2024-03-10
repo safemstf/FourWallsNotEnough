@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 break;
             case 'dashboard':
                 initializeDashboardPage();
+                initializeNavigation();
                 break;
             case 'settingsPage':
                 initializeSettingsPage();
@@ -78,4 +79,3 @@ function handleLogin(event) {
         console.error('Error:', error);
     });
 }
-

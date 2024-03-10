@@ -1,15 +1,15 @@
 // userRoutes.js
-const express = require('express');
-const bcrypt = require('bcrypt');
-const pool = require('./db'); // Assuming db.js is in the same directory
+import { Router } from 'express';
+import { hash } from 'bcrypt';
+import { query } from './sourceCode/database/db'; // Assuming db.js is in the same directory
 
-const apiRouter = express.Router();
+const apiRouter = Router();
 
 apiRouter.post('/users', async (req, res) => {
   const { username, password, email } = req.body;
   try {
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const [results] = await pool.query(
+    const hashedPassword = await hash(password, 10);
+    const [results] = await query(
       'INSERT INTO users (Username, PasswordHash, Email) VALUES (?, ?, ?)',
       [username, hashedPassword, email]
     );
@@ -22,7 +22,7 @@ apiRouter.post('/users', async (req, res) => {
 
 apiRouter.get('/users', async (req, res) => {
   try {
-    const [results] = await pool.query('SELECT * FROM users');
+    const [results] = await query('SELECT * FROM users');
     res.status(200).json(results);
   } catch (error) {
     console.error('Error fetching users:', error);
@@ -30,9 +30,4 @@ apiRouter.get('/users', async (req, res) => {
   }
 });
 
-module.exports = apiRouter;
-
-window.addEventListener("popstate", () => mainRouter(window.location.pathname));
-mainRouter(window.location.pathname); // Call the main router for every navigation link
-
-s
+export default apiRouter;
