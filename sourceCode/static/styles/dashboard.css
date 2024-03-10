@@ -1,0 +1,69 @@
+/* styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #cfcffb; /* Shade of violet for general background */
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    color: #333; /* Darker text for better readability */
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #cfcffb; /* Matching the general background */
+    margin: 20px auto; /* Center the container */
+    max-width: 1200px; /* Limit the maximum width */
+}
+
+.grid-item {
+    background-color: #abbbf9; /* Light purple for grid items */
+    padding: 20px;
+    flex: 1 1 calc(50% - 40px); /* Responsive flex basis with minimum */
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.grid-item:hover {
+    background-color: #fbe5cf; /* Light orange for hover */
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Enhanced shadow for lifted effect */
+}
+
+.chart-placeholder {
+    margin: 20px auto;
+    width: 80%;
+    background-color: #fff; /* Bright background for contrast */
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Consistent shadow */
+}
+
+header {
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    border-radius: 0 0 10px 10px; /* Soften the bottom corners */
+}
+
+a {
+    color: #333; /* Darker text for links for better readability */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+a:hover {
+    color: #000; /* Slight color change on hover for interactivity */
+}

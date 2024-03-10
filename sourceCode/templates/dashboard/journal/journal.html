@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal</title>
+    <link rel="stylesheet" href="/sourceCode/static/styles/journal.css">
+
+</head>
+<body>
+    <header>
+        <h1>Journal</h1>
+    </header>
+    <div class="toolbar top-toolbar">
+        <button id="btnBold">Bold</button>
+        <button id="btnItalic">Italic</button>
+        <button id="btnUnderline">Underline</button>
+        <label for="fontStyle">Font Style:</label>
+        <select id="fontStyle">
+            <option value="16px sans-serif">Sans Serif</option>
+            <option value="16px serif">Serif</option>
+        </select>
+        <label for="fontColor">Font Color:</label>
+        <input type="color" id="fontColor">
+        <button id="btnOpen">Open</button>
+        <label for="fileInput" style="display: none;">Open File:</label>
+        <input type="file" id="fileInput" style="display: none;" accept=".txt"> <!-- Accepting .txt for simplicity -->
+    </div>
+    <div class="main-content">
+        <canvas id="drawingCanvas"></canvas>
+        <input type="text" id="canvasTextInput" aria-label="Canvas text input" style="position: absolute;">
+    </div>
+    <script src="/sourceCode/templates/dashboard/journal/journal.js"></script>
+    <script src="/initializers.js"></script>
+    <script src="/Router.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</body>
+</html>

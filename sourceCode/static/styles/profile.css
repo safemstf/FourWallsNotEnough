@@ -1,0 +1,33 @@
+/* profile.css - Custom Styles for Profile Page */
+
+/* General page styling */
+body {
+    background-color: var(--bg-color-main);
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+.profile-header {
+    background-color: var(--bg-color-header);
+    color: var(--text-color);
+    box-shadow: var(--shadow-light);
+}
+
+/* Section titles */
+h2 {
+    color: var(--text-color);
+}
+
+/* Customizations for the chart section, slideshow, and quotes to fit the original color scheme */
+#major-chart, #slideshow, #quotes {
+    background-color: var(--bg-color-toolbar);
+    box-shadow: var(--shadow-deep);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.quote {
+    font-style: italic;
+    color: var(--text-color);
+}

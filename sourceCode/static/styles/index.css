@@ -1,0 +1,50 @@
+/* styles.css */
+:root {
+    --bg-color-main: #cfcffb;
+    --bg-color-header: #ffffff;
+    --bg-color-toolbar: #e8e8e8;
+    --bg-color-toolbar-item: #e0e0ff;
+    --bg-color-toolbar-item-hover: #d0d0f0;
+    --text-color: #333;
+    --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-deep: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --font-family: 'Helvetica', Arial, sans-serif;
+    --border-radius: 5px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100px; /* Width of the sidebar when collapsed */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    transition: width 0.5s; /* Smooth transition for expanding/collapsing */
+    z-index: 1000; /* Ensure sidebar is above other content */
+}
+
+.sidebar:hover {
+    width: 350px; /* Width of the sidebar when expanded */
+}
+
+/* Ensure content is not hidden under the expanded sidebar */
+.content {
+    margin-left: 200px; /* Same as collapsed sidebar width */
+    transition: margin-left 0.5s; /* Smooth transition for content adjustment */
+}
+
+.sidebar .navbar-brand, .sidebar .nav-link {
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis to overflowed text */
+}
+
+.sidebar .nav {
+    width: 100%;
+}
+
+/* Adjust content margin when sidebar is hovered */
+.sidebar:hover + .content {
+    margin-left: 350px; /* Same as expanded sidebar width */
+}

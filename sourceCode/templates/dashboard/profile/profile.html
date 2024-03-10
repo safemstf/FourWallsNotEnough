@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/sourceCode/templates/dashboard/profile/profile.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Profile Image -->
+        <div class="col-md-4">
+            <img src="/path/to/profile-image.jpg" alt="Profile Image" class="img-fluid rounded-circle">
+        </div>
+
+        <!-- Profile Data -->
+        <div class="col-md-8">
+            <h2>Profile Overview</h2>
+            <!-- Number Entries and Dates -->
+            <div id="number-entries">
+                <h3>Recent Entries</h3>
+                <!-- Dynamically load number entries and their dates here -->
+            </div>
+
+            <!-- Major Chart -->
+            <div id="major-chart">
+                <h3>Activity Chart</h3>
+                <!-- Chart placeholder -->
+                <canvas id="activityChart"></canvas>
+            </div>
+
+            <!-- Slideshow -->
+            <div id="slideshow" class="carousel slide" data-ride="carousel">
+                <h3>Gallery</h3>
+                <!-- Slideshow items -->
+            </div>
+
+            <!-- Quotes Placeholder -->
+            <div id="quotes">
+                <h3>Inspirational Quotes</h3>
+                <p>"Life is 10% what happens to us and 90% how we react to it." - Charles R. Swindoll</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
