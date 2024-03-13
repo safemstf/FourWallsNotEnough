@@ -1,15 +1,14 @@
-// userRoutes.js
 import { Router } from 'express';
-import { hash } from 'bcrypt';
-import { query } from './sourceCode/database/db'; // Assuming db.js is in the same directory
+import bcrypt from 'bcrypt';
+import pool from './sourceCode/database/db.js';
 
 const apiRouter = Router();
 
 apiRouter.post('/users', async (req, res) => {
   const { username, password, email } = req.body;
   try {
-    const hashedPassword = await hash(password, 10);
-    const [results] = await query(
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const [results] = await pool.query(
       'INSERT INTO users (Username, PasswordHash, Email) VALUES (?, ?, ?)',
       [username, hashedPassword, email]
     );
@@ -22,7 +21,7 @@ apiRouter.post('/users', async (req, res) => {
 
 apiRouter.get('/users', async (req, res) => {
   try {
-    const [results] = await query('SELECT * FROM users');
+    const [results] = await pool.query('SELECT * FROM users');
     res.status(200).json(results);
   } catch (error) {
     console.error('Error fetching users:', error);
